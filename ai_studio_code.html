@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Waves Aerial Yoga | Surat</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4A2A67',
+                        'primary-dark': '#5A3578',
+                        lavender: '#A47BC4',
+                        silk: '#8E5DAF',
+                        ivory: '#F7F2EE',
+                        gold: '#C8A05A',
+                        charcoal: '#2F2438',
+                        muted: '#5E5E66',
+                        wash: '#E9DDF4',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .silk-gradient {
+            background: linear-gradient(135deg, #4A2A67 0%, #5A3578 50%, #8E5DAF 100%);
+        }
+        .gold-border {
+            border-image: linear-gradient(to right, #C8A05A, #E9DDF4) 1;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-ivory text-charcoal font-sans antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-ivory/90 backdrop-blur-md border-b border-wash/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-2">
+                <span class="font-serif text-2xl font-bold tracking-widest text-primary">THE WAVES</span>
+                <span class="text-xs uppercase tracking-widest text-gold border-l border-gold/40 pl-2">Aerial Yoga</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-charcoal/80">
+                <a href="#benefits" class="hover:text-primary transition-colors">Why Aerial</a>
+                <a href="#programs" class="hover:text-primary transition-colors">Programs</a>
+                <a href="#timetable" class="hover:text-primary transition-colors">Timetable</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#pricing" class="hover:text-primary transition-colors">Pricing</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQs</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://wa.me/918733888476" target="_blank" class="p-2 text-primary hover:text-gold transition-colors" title="Chat on WhatsApp">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                </a>
+                <button onclick="openModal('Trial Booking')" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all shadow-sm">
+                    Book Trial Class
+                </button>
+            </div>
+
+            <button id="mobile-menu-toggle" class="md:hidden text-primary focus:outline-none" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-wash/60 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#benefits" class="block text-base font-medium text-charcoal/80 hover:text-primary">Why Aerial</a>
+            <a href="#programs" class="block text-base font-medium text-charcoal/80 hover:text-primary">Programs</a>
+            <a href="#timetable" class="block text-base font-medium text-charcoal/80 hover:text-primary">Timetable</a>
+            <a href="#about" class="block text-base font-medium text-charcoal/80 hover:text-primary">About</a>
+            <a href="#pricing" class="block text-base font-medium text-charcoal/80 hover:text-primary">Pricing</a>
+            <a href="#faq" class="block text-base font-medium text-charcoal/80 hover:text-primary">FAQs</a>
+            <div class="pt-4 flex flex-col space-y-3">
+                <button onclick="openModal('Trial Booking')" class="w-full text-center bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-semibold tracking-wide transition-all">
+                    Book Trial Class
+                </button>
+                <a href="https://wa.me/918733888476" target="_blank" class="w-full text-center border border-wash hover:bg-wash/10 py-3 rounded-xl font-semibold text-charcoal flex items-center justify-center space-x-2">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-green-600"></i>
+                    <span>WhatsApp Booking</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-ivory">
+        <div class="absolute inset-0 z-0">
+            <!-- Subtle backdrop graphics mimicking silk flow -->
+            <div class="absolute top-20 right-[-10%] w-[50%] h-[80%] rounded-full bg-gradient-to-br from-wash/40 via-lavender/10 to-transparent blur-3xl"></div>
+            <div class="absolute bottom-10 left-[-5%] w-[40%] h-[60%] rounded-full bg-gradient-to-tr from-gold/10 via-wash/20 to-transparent blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
+            <div class="lg:col-span-6 space-y-8 text-left fade-in">
+                <div class="inline-flex items-center space-x-2 bg-wash/60 border border-lavender/30 px-3 py-1.5 rounded-full">
+                    <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+                    <span class="text-xs uppercase tracking-widest font-semibold text-primary">Surat's Premium Aerial Studio</span>
+                </div>
+                
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-tight text-primary">
+                    Defy Gravity.<br>
+                    <span class="font-bold italic text-primary-dark">Discover You.</span>
+                </h1>
+                
+                <p class="text-base sm:text-lg text-muted max-w-lg leading-relaxed">
+                    Elevate your practice with Surat's highest-rated aerial yoga boutique. Blend strength, mobility, and mindfulness suspended in silk hammocks under expert guide Disha Jhaveri.
+                </p>
+
+                <!-- Micro Taglist -->
+                <div class="grid grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-center space-x-2.5">
+                        <div class="p-1.5 bg-wash rounded-lg text-primary"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <span class="text-sm font-semibold text-charcoal/90">Aerial Yoga</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5">
+                        <div class="p-1.5 bg-wash rounded-lg text-primary"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <span class="text-sm font-semibold text-charcoal/90">Core Strength</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5">
+                        <div class="p-1.5 bg-wash rounded-lg text-primary"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <span class="text-sm font-semibold text-charcoal/90">Flexibility</span>
+                    </div>
+                    <div class="flex items-center space-x-2.5">
+                        <div class="p-1.5 bg-wash rounded-lg text-primary"><i data-lucide="check" class="w-4 h-4"></i></div>
+                        <span class="text-sm font-semibold text-charcoal/90">Mindfulness</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button onclick="openModal('Trial Booking')" class="bg-primary hover:bg-primary-dark text-white text-center py-4 px-8 rounded-full font-bold tracking-wide transition-all transform hover:-translate-y-0.5 shadow-md">
+                        Book Trial Class (₹499)
+                    </button>
+                    <a href="https://wa.me/918733888476" target="_blank" class="flex items-center justify-center gap-2 border border-primary/20 bg-white hover:bg-wash/20 text-primary py-4 px-8 rounded-full font-bold transition-all transform hover:-translate-y-0.5">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-green-600"></i>
+                        <span>WhatsApp Now</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image Composition -->
+            <div class="lg:col-span-6 relative flex justify-center">
+                <div class="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                    <!-- High-quality visual representation of suspended elegance/silk posture -->
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" 
+                         alt="Aerial Yoga silk practice at The Waves" 
+                         class="w-full h-full object-cover">
+                    <!-- Gradient Overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent"></div>
+                </div>
+                
+                <!-- Floating Card -->
+                <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl flex items-center space-x-4 max-w-xs border border-wash">
+                    <div class="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+                        <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm font-bold text-charcoal">4.9★ Google Rating</p>
+                        <p class="text-xs text-muted">Loved by 250+ Surat yogis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START YOUR AERIAL JOURNEY (3-step flow) -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-gold">Simple 3-Step Flow</h2>
+                <p class="font-serif text-3xl sm:text-4xl text-primary font-normal">Start Your Aerial Journey</p>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="bg-ivory/50 rounded-2xl p-8 border border-wash hover:border-lavender/40 transition-all text-center space-y-4 relative group">
+                    <div class="w-16 h-16 rounded-full bg-wash flex items-center justify-center mx-auto text-primary font-serif text-2xl font-bold group-hover:bg-primary group-hover:text-white transition-all">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-primary">Book Your Trial</h3>
+                    <p class="text-sm text-muted">Secure your spot for just ₹499. Choose a beginner-friendly morning or evening slot that fits your calendar.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-ivory/50 rounded-2xl p-8 border border-wash hover:border-lavender/40 transition-all text-center space-y-4 relative group">
+                    <div class="w-16 h-16 rounded-full bg-wash flex items-center justify-center mx-auto text-primary font-serif text-2xl font-bold group-hover:bg-primary group-hover:text-white transition-all">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-primary">Attend Session</h3>
+                    <p class="text-sm text-muted">Arrive 10 minutes early. Our certified coaches will introduce you to your suspended silk hammock and basic postures.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-ivory/50 rounded-2xl p-8 border border-wash hover:border-lavender/40 transition-all text-center space-y-4 relative group">
+                    <div class="w-16 h-16 rounded-full bg-wash flex items-center justify-center mx-auto text-primary font-serif text-2xl font-bold group-hover:bg-primary group-hover:text-white transition-all">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-primary">Choose Membership</h3>
+                    <p class="text-sm text-muted">Loved the high? Select from our monthly or unlimited plans that fit your lifestyle and transformation goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY AERIAL YOGA -->
+    <section id="benefits" class="py-24 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-gold">The Science of Suspension</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-primary leading-tight">Why Choose Suspension Over Traditional Mat Yoga?</h2>
+                    <p class="text-muted leading-relaxed">
+                        By utilizing high-strength silk hammocks, aerial yoga partially or fully supports your body weight. This reduces spinal compression, deepens joint mobility, and allows for supported alignment changes impossible on the floor.
+                    </p>
+                    <div class="pt-4">
+                        <button onclick="openModal('Trial Booking')" class="text-primary font-bold hover:text-gold flex items-center space-x-2 transition-all group">
+                            <span>Experience it yourself</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Benefit 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-wash hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-wash flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="activity" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-md font-bold text-primary mb-2">Improves Flexibility</h3>
+                        <p class="text-sm text-muted">Deepen hamstring and pelvic stretches gently with safe posture variations.</p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-wash hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-wash flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="shield" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-md font-bold text-primary mb-2">Builds Core Strength</h3>
+                        <p class="text-sm text-muted">Suspension naturally forces deep stabilizing core activation across every sequence.</p>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-wash hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-wash flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="heart" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-md font-bold text-primary mb-2">Reduces Stress</h3>
+                        <p class="text-sm text-muted">Gentle inversion practices trigger natural hormonal responses that soothe your nervous system.</p>
+                    </div>
+                    <!-- Benefit 4 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-wash hover:shadow-md transition-shadow">
+                        <div class="w-10 h-10 rounded-lg bg-wash flex items-center justify-center text-primary mb-4">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-md font-bold text-primary mb-2">Beginner Friendly</h3>
+                        <p class="text-sm text-muted">Every pose can be scaled. No background in gymnast or traditional yoga required.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS SECTION -->
+    <section id="programs" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Designed for Every Phase</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">Curated Studio Programs</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="bg-ivory/30 rounded-2xl overflow-hidden border border-wash flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="p-8 space-y-4">
+                        <div class="inline-block bg-wash text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Beginner Focus</div>
+                        <h3 class="text-xl font-bold text-primary font-serif">Aerial Yoga Foundations</h3>
+                        <p class="text-sm text-muted leading-relaxed">Learn safe mounting, balancing, and fundamental alignment patterns. Build initial confidence in suspension.</p>
+                    </div>
+                    <div class="p-8 pt-0 border-t border-wash/40 mt-4 flex justify-between items-center bg-ivory/10">
+                        <span class="text-xs text-muted font-medium">60 Mins • Standard Temp</span>
+                        <button onclick="openModal('Aerial Yoga Foundations')" class="text-primary font-bold hover:text-gold text-sm">Explore Details</button>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="bg-ivory/30 rounded-2xl overflow-hidden border border-wash flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="p-8 space-y-4">
+                        <div class="inline-block bg-lavender/20 text-primary-dark text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full font-semibold">Intermediate Flow</div>
+                        <h3 class="text-xl font-bold text-primary font-serif">Aerial Flow</h3>
+                        <p class="text-sm text-muted leading-relaxed">Seamless transitions sequencing core stability postures while gracefully suspended. Builds elevated physical stamina.</p>
+                    </div>
+                    <div class="p-8 pt-0 border-t border-wash/40 mt-4 flex justify-between items-center bg-ivory/10">
+                        <span class="text-xs text-muted font-medium">60 Mins • Elevate Flow</span>
+                        <button onclick="openModal('Aerial Flow')" class="text-primary font-bold hover:text-gold text-sm">Explore Details</button>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="bg-ivory/30 rounded-2xl overflow-hidden border border-wash flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="p-8 space-y-4">
+                        <div class="inline-block bg-gold/15 text-gold text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Therapeutic Focus</div>
+                        <h3 class="text-xl font-bold text-primary font-serif">Therapeutic Aerial Yoga</h3>
+                        <p class="text-sm text-muted leading-relaxed">Relaxed low-height settings. Restores decompression to lower vertebrae and targets deep fascia muscle release.</p>
+                    </div>
+                    <div class="p-8 pt-0 border-t border-wash/40 mt-4 flex justify-between items-center bg-ivory/10">
+                        <span class="text-xs text-muted font-medium">75 Mins • High Therapy</span>
+                        <button onclick="openModal('Therapeutic Aerial Yoga')" class="text-primary font-bold hover:text-gold text-sm">Explore Details</button>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="bg-ivory/30 rounded-2xl overflow-hidden border border-wash flex flex-col justify-between group hover:shadow-lg transition-all">
+                    <div class="p-8 space-y-4">
+                        <div class="inline-block bg-wash text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">For Kids</div>
+                        <h3 class="text-xl font-bold text-primary font-serif">Kids Aerial Yoga</h3>
+                        <p class="text-sm text-muted leading-relaxed">A fun, playful introduction to spatial balance and spatial intelligence using specialized aerial setups.</p>
+                    </div>
+                    <div class="p-8 pt-0 border-t border-wash/40 mt-4 flex justify-between items-center bg-ivory/10">
+                        <span class="text-xs text-muted font-medium">45 Mins • Safe Flow</span>
+                        <button onclick="openModal('Kids Aerial Yoga')" class="text-primary font-bold hover:text-gold text-sm">Explore Details</button>
+                    </div>
+                </div>
+
+                <!-- Program 5 -->
+                <div class="bg-ivory/30 rounded-2xl overflow-hidden border border-wash flex flex-col justify-between group hover:shadow-lg transition-all md:col-span-2 lg:col-span-2">
+                    <div class="p-8 space-y-4 flex flex-col md:flex-row md:space-x-8 md:items-center">
+                        <div class="space-y-4 flex-1">
+                            <div class="inline-block bg-gold text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Professional Pathway</div>
+                            <h3 class="text-2xl font-bold text-primary font-serif">Yoga Teacher Training</h3>
+                            <p class="text-sm text-muted leading-relaxed">Gain accredited certifications to safely mount equipment, coordinate dynamic spatial alignments, plan class templates, and correct suspension forms.</p>
+                        </div>
+                        <div class="mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 md:border-l border-wash/60 pl-0 md:pl-8 flex flex-col space-y-2 justify-center shrink-0">
+                            <span class="text-xs text-muted font-medium">Accredited Certification • Comprehensive Study</span>
+                            <button onclick="openModal('Teacher Training')" class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full text-xs font-bold text-center tracking-wider transition-all">Request Syllabus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMETABLE SECTION -->
+    <section id="timetable" class="py-24 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Plan Your Session</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">Weekly Studio Timetable</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Custom Interactive Timetable Tabs -->
+            <div class="flex justify-center space-x-2 mb-8 border-b border-wash/60 pb-4 overflow-x-auto">
+                <button onclick="switchDay('mon')" id="tab-mon" class="day-tab px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all bg-primary text-white">Mon</button>
+                <button onclick="switchDay('tue')" id="tab-tue" class="day-tab px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all text-muted hover:text-primary">Tue</button>
+                <button onclick="switchDay('wed')" id="tab-wed" class="day-tab px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all text-muted hover:text-primary">Wed</button>
+                <button onclick="switchDay('thu')" id="tab-thu" class="day-tab px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide transition-all text-muted hover:text-primary">Thu-Sat</button>
+            </div>
+
+            <!-- Day-Specific Tables -->
+            <div class="bg-white rounded-2xl shadow-sm border border-wash overflow-hidden">
+                <!-- MON SCHEDULE -->
+                <div id="sched-mon" class="day-schedule block">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-wash/30 border-b border-wash text-xs font-bold uppercase tracking-wider text-muted">
+                                <th class="p-6">Time Slot</th>
+                                <th class="p-6">Program Class</th>
+                                <th class="p-6">Coach Name</th>
+                                <th class="p-6 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-wash/40 text-sm">
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">07:00 AM - 08:00 AM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Aerial Yoga Foundations</span>
+                                    <span class="block text-xs text-muted">Ideal for novices & first-timers</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Mon 7:00 AM Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">06:00 PM - 07:00 PM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Aerial Flow</span>
+                                    <span class="block text-xs text-muted">Intermediate flow sequence</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Mon 6:00 PM Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- TUE SCHEDULE -->
+                <div id="sched-tue" class="day-schedule hidden">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-wash/30 border-b border-wash text-xs font-bold uppercase tracking-wider text-muted">
+                                <th class="p-6">Time Slot</th>
+                                <th class="p-6">Program Class</th>
+                                <th class="p-6">Coach Name</th>
+                                <th class="p-6 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-wash/40 text-sm">
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">07:00 AM - 08:00 AM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Aerial Yoga Foundations</span>
+                                    <span class="block text-xs text-muted">Ideal for novices & first-timers</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Tue 7:00 AM Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">06:00 PM - 07:15 PM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Therapeutic Recovery</span>
+                                    <span class="block text-xs text-muted">Low hammock pelvic alignment</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Tue 6:00 PM Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- WED SCHEDULE -->
+                <div id="sched-wed" class="day-schedule hidden">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-wash/30 border-b border-wash text-xs font-bold uppercase tracking-wider text-muted">
+                                <th class="p-6">Time Slot</th>
+                                <th class="p-6">Program Class</th>
+                                <th class="p-6">Coach Name</th>
+                                <th class="p-6 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-wash/40 text-sm">
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">07:00 AM - 08:00 AM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Aerial Flow</span>
+                                    <span class="block text-xs text-muted">Advanced balance posture dynamics</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Wed 7:00 AM Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">06:00 PM - 07:00 PM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Aerial Flow</span>
+                                    <span class="block text-xs text-muted">Core focus sequencing</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Wed 6:00 PM Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- THU-SAT SCHEDULE -->
+                <div id="sched-thu" class="day-schedule hidden">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-wash/30 border-b border-wash text-xs font-bold uppercase tracking-wider text-muted">
+                                <th class="p-6">Time Slot</th>
+                                <th class="p-6">Program Class</th>
+                                <th class="p-6">Coach Name</th>
+                                <th class="p-6 text-right">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-wash/40 text-sm">
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">08:00 AM - 09:30 AM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Teacher Certification Program</span>
+                                    <span class="block text-xs text-muted">Accredited instructor methodology</span>
+                                </td>
+                                <td class="p-6 text-muted">Disha Jhaveri</td>
+                                <td class="p-6 text-right"><button onclick="openModal('YTT Weekend Batch')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-semibold text-primary">04:30 PM - 05:30 PM</td>
+                                <td class="p-6">
+                                    <span class="font-bold text-charcoal">Kids Aerial Playground</span>
+                                    <span class="block text-xs text-muted">Fun hammock movement activities</span>
+                                </td>
+                                <td class="p-6 text-muted">Studio Instructor</td>
+                                <td class="p-6 text-right"><button onclick="openModal('Kids Saturday Class')" class="bg-wash hover:bg-lavender/30 text-primary font-bold px-4 py-2 rounded-full text-xs transition-all">Book Slot</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <p class="text-xs text-center text-muted mt-6 italic">Looking for specialized customized batches or private studio group bookings? <a href="https://wa.me/918733888476" target="_blank" class="text-primary hover:underline font-semibold">Message our team.</a></p>
+        </div>
+    </section>
+
+    <!-- MEET THE TRAINER -->
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Coach Image -->
+                <div class="lg:col-span-5 relative">
+                    <div class="aspect-[3/4] rounded-3xl overflow-hidden shadow-xl border border-wash relative z-10 bg-wash">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=800&auto=format&fit=crop" 
+                             alt="Founder Disha Jhaveri" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gold/20 via-wash/20 to-transparent blur-2xl z-0 transform -translate-x-4 -translate-y-4"></div>
+                </div>
+
+                <!-- Coach Bio -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-gold">Founder & Lead Coach</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-primary font-normal">Disha Jhaveri</h2>
+                    <p class="text-sm font-semibold tracking-wider text-muted uppercase">Experienced Educator • Certified Aerial Specialist</p>
+                    <div class="w-12 h-0.5 bg-gold rounded-full"></div>
+                    
+                    <p class="text-muted leading-relaxed">
+                        With multiple certifications in suspension training, alignment adjustment, and posture restoration, Disha founded The Waves to build a friendly, modern wellness refuge. She customizes progressions for every body type to ensure aerial suspension feels safe, restorative, and exciting.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="space-y-1">
+                            <h4 class="text-sm font-bold text-primary">Accredited Instructor</h4>
+                            <p class="text-xs text-muted">Advanced training in classical yoga asana and suspension flow.</p>
+                        </div>
+                        <div class="space-y-1">
+                            <h4 class="text-sm font-bold text-primary">250+ Transformations</h4>
+                            <p class="text-xs text-muted">Helped students overcome physical stress, back fatigue, and postural imbalances.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="https://www.instagram.com/the_waves_yoga/" target="_blank" class="inline-flex items-center space-x-2 text-primary font-bold hover:text-gold transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                            <span>Follow Disha on Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDIO GALLERY -->
+    <section class="py-24 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Inside the Sanctuary</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">The Waves Studio Gallery</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-sm border border-white/50 bg-wash">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop" alt="Premium hammock silks" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-semibold tracking-wider">Premium Silk Hammocks</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-sm border border-white/50 bg-wash">
+                    <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?q=80&w=800&auto=format&fit=crop" alt="Inverted pose stretching" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-semibold tracking-wider">Spinal Decompression Practices</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-sm border border-white/50 bg-wash">
+                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" alt="Mindful relaxation studio" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-semibold tracking-wider">Calming Studio Lighting</span>
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="group relative aspect-square rounded-2xl overflow-hidden shadow-sm border border-white/50 bg-wash">
+                    <img src="https://images.unsplash.com/photo-1524864911225-6078e9c714d8?q=80&w=800&auto=format&fit=crop" alt="Yoga Workshop group" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                        <span class="text-white text-xs font-semibold tracking-wider">Focused Teacher Training</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMBERSHIP PLANS -->
+    <section id="pricing" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Honest & Transparent pricing</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">Membership & Trial Options</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Plan 1 -->
+                <div class="bg-ivory/40 rounded-3xl p-8 border border-wash flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <span class="text-xs uppercase font-bold tracking-widest text-gold">Introductory Flow</span>
+                            <h3 class="text-xl font-bold font-serif text-primary">Trial Class</h3>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-3xl font-serif font-bold text-primary">₹499</span>
+                            <span class="text-xs text-muted ml-2">/ single class slot</span>
+                        </div>
+                        <p class="text-xs text-muted">Beginner-friendly single practice introducing basic hammock controls, safety adjustments, and posture scaling.</p>
+                        <div class="w-full h-[1px] bg-wash"></div>
+                        <ul class="space-y-3 text-sm text-charcoal/90">
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>1x Premium suspension slot</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Introductory safety orientation</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Sanitized silk setup</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Dedicated trainer oversight</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Trial Class Pricing Plan')" class="w-full mt-8 bg-wash hover:bg-lavender/30 text-primary py-3 rounded-full text-sm font-bold tracking-wide transition-all">
+                        Book Trial Session
+                    </button>
+                </div>
+
+                <!-- Plan 2 -->
+                <div class="bg-primary text-white rounded-3xl p-8 border border-primary relative flex flex-col justify-between shadow-xl transform scale-105">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gold text-white text-[10px] uppercase font-bold tracking-widest px-4 py-1 rounded-full shadow-sm">
+                        Most Popular
+                    </div>
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <span class="text-xs uppercase font-bold tracking-widest text-lavender">Consistent practice</span>
+                            <h3 class="text-xl font-bold font-serif text-white">Monthly membership</h3>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-3xl font-serif font-bold text-white">₹3,999</span>
+                            <span class="text-xs text-lavender ml-2">/ month</span>
+                        </div>
+                        <p class="text-xs text-lavender">Designed for individuals seeking structured habit building and consistent weekly posture strengthening routines.</p>
+                        <div class="w-full h-[1px] bg-white/10"></div>
+                        <ul class="space-y-3 text-sm text-white/90">
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>3 Sessions per week</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Access to Foundations & Flow</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Priority class slot bookings</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Personalized posture tracking</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Monthly Membership Pricing Plan')" class="w-full mt-8 bg-gold hover:bg-white hover:text-primary text-white py-3 rounded-full text-sm font-bold tracking-wide transition-all shadow-md">
+                        Start Monthly Plan
+                    </button>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="bg-ivory/40 rounded-3xl p-8 border border-wash flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <span class="text-xs uppercase font-bold tracking-widest text-gold">Ultimate commitment</span>
+                            <h3 class="text-xl font-bold font-serif text-primary">Unlimited flow</h3>
+                        </div>
+                        <div class="flex items-baseline">
+                            <span class="text-3xl font-serif font-bold text-primary">₹6,999</span>
+                            <span class="text-xs text-muted ml-2">/ month</span>
+                        </div>
+                        <p class="text-xs text-muted">Complete unlimited availability access to any standard, flow, or recovery class throughout our active operating hours.</p>
+                        <div class="w-full h-[1px] bg-wash"></div>
+                        <ul class="space-y-3 text-sm text-charcoal/90">
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Unlimited active bookings</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Access to therapeutic workshops</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Complimentary guest passes</span></li>
+                            <li class="flex items-center space-x-2"><i data-lucide="check" class="w-4 h-4 text-gold"></i><span>Specialized weekend workshop discounts</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Unlimited Plan Pricing Plan')" class="w-full mt-8 bg-wash hover:bg-lavender/30 text-primary py-3 rounded-full text-sm font-bold tracking-wide transition-all">
+                        Select Unlimited
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDENT TRANSFORMATIONS & TESTIMONIALS -->
+    <section class="py-24 bg-ivory">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Real Experiences</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">Transformations Suspended In Silk</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <!-- Split Transformation Showcase -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs uppercase tracking-widest font-bold text-gold">Postural Alignment Progress</span>
+                    <h3 class="font-serif text-2xl text-primary font-normal">Why Consistency Matters</h3>
+                    <p class="text-sm text-muted">
+                        Unbalanced posture on conventional gym floors often locks tightness into shoulder joints. Our hammock methods create a protective space where traction works gently over consecutive weeks:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 rounded-full bg-red-100 text-red-600 flex items-center justify-center shrink-0 mt-0.5"><span class="text-xs">✕</span></div>
+                            <p class="text-sm text-muted"><strong>Before:</strong> Chronic spinal compression, shallow balance, pelvic misalignment, back pain.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-5 h-5 rounded-full bg-green-100 text-green-600 flex items-center justify-center shrink-0 mt-0.5"><span class="text-xs">✓</span></div>
+                            <p class="text-sm text-muted"><strong>After 6 Weeks:</strong> Enhanced core stability, lengthened spinal space, confidence in inversions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-wash/80 flex flex-col justify-between">
+                        <p class="text-sm text-muted leading-relaxed italic">
+                            "I had never tried aerial yoga and was honestly terrified of going upside down. Disha made everything feel so natural and steady. After just two months of consistent classes, my lower back pain is gone."
+                        </p>
+                        <div class="pt-6 flex items-center space-x-3 border-t border-wash/40 mt-4">
+                            <div class="w-10 h-10 rounded-full bg-wash text-primary flex items-center justify-center font-bold text-xs">AM</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-primary">Aarti Mehta</h4>
+                                <p class="text-[11px] text-muted">Regular Member Since Oct 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-wash/80 flex flex-col justify-between">
+                        <p class="text-sm text-muted leading-relaxed italic">
+                            "The Waves has completely replaced my regular gym routine. The classes focus heavily on alignment, postural awareness, and building a strong core. Definitely a premium experience in Surat!"
+                        </p>
+                        <div class="pt-6 flex items-center space-x-3 border-t border-wash/40 mt-4">
+                            <div class="w-10 h-10 rounded-full bg-wash text-primary flex items-center justify-center font-bold text-xs">PS</div>
+                            <div>
+                                <h4 class="text-sm font-bold text-primary">Priya Sharma</h4>
+                                <p class="text-[11px] text-muted">Flow & Intermediate Member</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKSHOPS & EVENTS -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Curated Specialty Workshops</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">Upcoming Studio Events</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-ivory/50 rounded-2xl p-8 border border-wash flex flex-col justify-between hover:border-lavender/30 transition-all">
+                    <div class="space-y-4">
+                        <div class="inline-block bg-wash text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Coming Saturday</div>
+                        <h3 class="text-xl font-bold text-primary font-serif">Sound Healing & Suspended Nidra</h3>
+                        <p class="text-sm text-muted leading-relaxed">Relax inside our floating silk hammocks while being enveloped by therapeutic sound bath frequencies. Relieves anxiety and aids sleep hygiene.</p>
+                    </div>
+                    <div class="pt-6 border-t border-wash/60 mt-6 flex justify-between items-center">
+                        <span class="text-xs text-gold font-bold">₹1,199 / Non-members</span>
+                        <button onclick="openModal('Sound Healing Event')" class="text-primary font-bold hover:text-gold text-sm">Register Slot</button>
+                    </div>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="bg-ivory/50 rounded-2xl p-8 border border-wash flex flex-col justify-between hover:border-lavender/30 transition-all">
+                    <div class="space-y-4">
+                        <div class="inline-block bg-wash text-primary text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">Monthly Seminar</div>
+                        <h3 class="text-xl font-bold text-primary font-serif">Women's Wellness & Hormonal Balance</h3>
+                        <p class="text-sm text-muted leading-relaxed">A specialty session led by founder Disha Jhaveri. Focuses on low-height hip-openers, breathing patterns, and stress reduction postures.</p>
+                    </div>
+                    <div class="pt-6 border-t border-wash/60 mt-6 flex justify-between items-center">
+                        <span class="text-xs text-gold font-bold">₹999 / Guest Ticket</span>
+                        <button onclick="openModal('Women\'s Wellness Seminar')" class="text-primary font-bold hover:text-gold text-sm">Register Slot</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="py-24 bg-ivory">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest font-bold text-gold">Common Concerns</span>
+                <h2 class="font-serif text-3xl sm:text-4xl text-primary">Frequently Asked Questions</h2>
+                <div class="w-16 h-1 bg-gold mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Accordion 1 -->
+                <div class="bg-white rounded-2xl border border-wash overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-primary flex justify-between items-center hover:bg-wash/10 focus:outline-none transition-colors" onclick="toggleAccordion('faq-1')">
+                        <span>Is aerial yoga safe for absolute beginners?</span>
+                        <i data-lucide="chevron-down" id="faq-1-icon" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div id="faq-1" class="hidden p-6 pt-0 text-sm text-muted leading-relaxed border-t border-wash/20">
+                        Absolutely. Most of our members started with zero gymnastics or mat yoga experience. Our silk hammocks are high-grade, premium quality materials suspended from engineered steel anchors capable of holding over 450+ kg. Under certified trainers, you learn step-by-step.
+                    </div>
+                </div>
+
+                <!-- Accordion 2 -->
+                <div class="bg-white rounded-2xl border border-wash overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-primary flex justify-between items-center hover:bg-wash/10 focus:outline-none transition-colors" onclick="toggleAccordion('faq-2')">
+                        <span>What should I wear to my first class?</span>
+                        <i data-lucide="chevron-down" id="faq-2-icon" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div id="faq-2" class="hidden p-6 pt-0 text-sm text-muted leading-relaxed border-t border-wash/20">
+                        We recommend well-fitting athletic wear that covers the backs of your knees and armpits (such as full leggings and a t-shirt). Avoid clothes with sharp zippers, buttons, or wearing jewelry, as they can pull or snag on the delicate silks.
+                    </div>
+                </div>
+
+                <!-- Accordion 3 -->
+                <div class="bg-white rounded-2xl border border-wash overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-primary flex justify-between items-center hover:bg-wash/10 focus:outline-none transition-colors" onclick="toggleAccordion('faq-3')">
+                        <span>Is there a weight limit for using the silks?</span>
+                        <i data-lucide="chevron-down" id="faq-3-icon" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div id="faq-3" class="hidden p-6 pt-0 text-sm text-muted leading-relaxed border-t border-wash/20">
+                        Our premium silk hammock setups are professionally engineered and securely anchored to manage weights up to 130 kg safely. Standard movements are easily customized depending on comfort level and grip control.
+                    </div>
+                </div>
+
+                <!-- Accordion 4 -->
+                <div class="bg-white rounded-2xl border border-wash overflow-hidden">
+                    <button class="w-full text-left p-6 font-bold text-primary flex justify-between items-center hover:bg-wash/10 focus:outline-none transition-colors" onclick="toggleAccordion('faq-4')">
+                        <span>What is the minimum age requirement?</span>
+                        <i data-lucide="chevron-down" id="faq-4-icon" class="w-5 h-5 transition-transform"></i>
+                    </button>
+                    <div id="faq-4" class="hidden p-6 pt-0 text-sm text-muted leading-relaxed border-t border-wash/20">
+                        Our standard program packages are tailored for students aged 14 and above. However, we do host dedicated "Kids Aerial Yoga" playground modules specifically mapped for ages 7 to 13.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <footer class="bg-primary text-white pt-20 pb-10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+            <!-- Studio Contacts -->
+            <div class="lg:col-span-5 space-y-6">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="font-serif text-2xl font-bold tracking-widest text-white">THE WAVES</span>
+                    <span class="text-[10px] uppercase tracking-widest text-gold border-l border-white/20 pl-2">Aerial Yoga</span>
+                </a>
+                <p class="text-sm text-lavender max-w-sm leading-relaxed">
+                    Surat's premium sanctuary for aerial yoga, core flexibility training, and physical recovery. Guided by professional coach Disha Jhaveri.
+                </p>
+                
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-start space-x-3 text-sm text-white/90">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-gold shrink-0 mt-0.5"></i>
+                        <span>Athwa / City Light area, Surat, Gujarat, India</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-sm text-white/90">
+                        <i data-lucide="phone" class="w-5 h-5 text-gold shrink-0"></i>
+                        <span>+91 87338 88476</span>
+                    </div>
+                </div>
+
+                <div class="flex space-x-4 pt-2">
+                    <a href="https://www.instagram.com/the_waves_yoga/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-all">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://wa.me/918733888476" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 flex items-center justify-center text-white transition-all">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Quick Links -->
+            <div class="lg:col-span-3 space-y-4">
+                <h4 class="text-sm font-bold uppercase tracking-wider text-gold">Explore</h4>
+                <ul class="space-y-2 text-sm text-lavender">
+                    <li><a href="#benefits" class="hover:text-white transition-colors">Benefits of Silk Suspension</a></li>
+                    <li><a href="#programs" class="hover:text-white transition-colors">Program Levels</a></li>
+                    <li><a href="#timetable" class="hover:text-white transition-colors">Weekly Timetable</a></li>
+                    <li><a href="#pricing" class="hover:text-white transition-colors">Membership Fees</a></li>
+                    <li><a href="#faq" class="hover:text-white transition-colors">FAQs</a></li>
+                </ul>
+            </div>
+
+            <!-- Lead Capture Box -->
+            <div class="lg:col-span-4 bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
+                <h4 class="text-sm font-bold uppercase tracking-wider text-gold">Inquire about Private slots</h4>
+                <p class="text-xs text-lavender">Leave your contact details. Our representative will share timing slots via WhatsApp.</p>
+                <form id="footer-lead" onsubmit="handleInquiry(event)" class="space-y-2">
+                    <input type="text" id="lead-name" placeholder="Your Name" required class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white placeholder-white/40 focus:outline-none focus:border-gold">
+                    <input type="tel" id="lead-phone" placeholder="Phone Number" required class="w-full bg-white/10 border border-white/10 rounded-lg px-4 py-2.5 text-xs text-white placeholder-white/40 focus:outline-none focus:border-gold">
+                    <button type="submit" class="w-full bg-gold hover:bg-gold/90 text-white py-2.5 rounded-lg text-xs font-bold transition-all">Request Callback</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 flex flex-col sm:flex-row justify-between items-center text-xs text-lavender/60">
+            <p>&copy; <span id="current-year"></span> The Waves Aerial Yoga. All rights reserved.</p>
+            <p class="mt-2 sm:mt-0">Premium Wellness Studio | Surat, Gujarat</p>
+        </div>
+    </footer>
+
+    <!-- BOOKING MODAL -->
+    <div id="booking-modal" class="fixed inset-0 bg-black/50 z-[100] flex items-center justify-center p-4 hidden backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 relative border border-wash/60 shadow-2xl animate-fadeIn">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-charcoal/40 hover:text-charcoal transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            
+            <div class="space-y-2 mb-6 text-center">
+                <span id="modal-badge" class="text-xs font-bold uppercase tracking-widest text-gold">Trial Registration</span>
+                <h3 id="modal-title" class="text-2xl font-serif text-primary">Book Your Aerial Space</h3>
+                <p class="text-xs text-muted">Complete the quick registration below. We will secure your hammock and text confirmation.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <input type="hidden" id="modal-class-type">
+                
+                <div>
+                    <label class="block text-xs font-bold text-charcoal/85 uppercase tracking-wider mb-1">Your Full Name</label>
+                    <input type="text" id="booking-name" required class="w-full border border-wash rounded-xl px-4 py-3 text-sm text-charcoal focus:outline-none focus:border-primary placeholder-charcoal/30" placeholder="e.g. Aditi Shah">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-charcoal/85 uppercase tracking-wider mb-1">WhatsApp Mobile Number</label>
+                    <input type="tel" id="booking-phone" required class="w-full border border-wash rounded-xl px-4 py-3 text-sm text-charcoal focus:outline-none focus:border-primary placeholder-charcoal/30" placeholder="e.g. +91 98765 43210">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-charcoal/85 uppercase tracking-wider mb-1">Preferable Time Slot</label>
+                    <select id="booking-preference" class="w-full border border-wash rounded-xl px-4 py-3 text-sm text-charcoal bg-white focus:outline-none focus:border-primary">
+                        <option>Morning (07:00 AM)</option>
+                        <option>Evening (06:00 PM)</option>
+                        <option>Teacher Training (Weekend)</option>
+                    </select>
+                </div>
+
+                <div class="p-3 bg-wash/40 rounded-xl flex items-start space-x-2 text-xs text-muted leading-relaxed">
+                    <i data-lucide="info" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                    <span>First trial class is chargeable at <strong>₹499</strong>, paid on arrival at Athwa / City Light studio location.</span>
+                </div>
+
+                <button type="submit" class="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-full font-bold tracking-wide transition-all shadow-md">
+                    Secure Class Booking
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Footer Dynamic Year
+        document.getElementById('current-year').innerText = new Date().getFullYear();
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 20) {
+                header.classList.add('bg-white', 'shadow-sm');
+                header.classList.remove('bg-ivory/90');
+            } else {
+                header.classList.add('bg-ivory/90');
+                header.classList.remove('bg-white', 'shadow-sm');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const toggleBtn = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        toggleBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Switch Days in Timetable
+        function switchDay(dayId) {
+            // Hide all schedules
+            document.querySelectorAll('.day-schedule').forEach(el => el.classList.add('hidden'));
+            
+            // Remove active classes from tabs
+            document.querySelectorAll('.day-tab').forEach(el => {
+                el.classList.remove('bg-primary', 'text-white');
+                el.classList.add('text-muted', 'hover:text-primary');
+            });
+
+            // Show current day schedule
+            document.getElementById('sched-' + dayId).classList.remove('hidden');
+
+            // Set current tab active
+            const currentTab = document.getElementById('tab-' + dayId);
+            currentTab.classList.remove('text-muted', 'hover:text-primary');
+            currentTab.classList.add('bg-primary', 'text-white');
+        }
+
+        // Accordion Toggle
+        function toggleAccordion(faqId) {
+            const content = document.getElementById(faqId);
+            const icon = document.getElementById(faqId + '-icon');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Modal triggers
+        const modal = document.getElementById('booking-modal');
+        function openModal(classType = 'General Booking') {
+            document.getElementById('modal-class-type').value = classType;
+            document.getElementById('modal-title').innerText = classType;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Modal Action
+        function handleModalSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('booking-name').value;
+            const phone = document.getElementById('booking-phone').value;
+            const preference = document.getElementById('booking-preference').value;
+            const classType = document.getElementById('modal-class-type').value;
+
+            // Clean direct WhatsApp click generation
+            const textMsg = `Hello! I would like to book an 
